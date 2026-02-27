@@ -1,6 +1,11 @@
+<script setup lang="ts">
+import Particles from "~/components/atoms/Particles.vue";
+</script>
+
 <template>
-  <div>
-    <h1 class="text-4xl font-bold mb-4">Welcome to My Portfolio</h1>
-    <p class="text-lg text-gray-600">Explore my projects and experience.</p>
+  <div class="relative flex min-h-screen bg-black">
+    <Particles />
+    
+    <Icon name="lucide:github" style="color: white" />
   </div>
 </template>
