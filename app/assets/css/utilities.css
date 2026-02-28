@@ -15,7 +15,7 @@
   box-shadow: 0 0 40px oklch(0.30 0 0 / 0.5);
 }
 
-/* Hero section */
+/* Vignette gradient */
 .hero-vignette {
   background: radial-gradient(ellipse at 50% 50%, transparent 0%, oklch(0.07 0 0) 70%);
 }

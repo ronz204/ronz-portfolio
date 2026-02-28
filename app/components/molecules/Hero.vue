@@ -4,7 +4,7 @@
     <Particles />
 
     <!-- Radial gradient overlay -->
-    <!-- <div class="hero-vignette absolute inset-0 pointer-events-none" aria-hidden="true" /> -->
+    <div class="hero-vignette absolute inset-0 pointer-events-none" aria-hidden="true" />
 
     <!-- Content -->
     <div class="relative z-10 mx-auto max-w-4xl px-6 text-center">
