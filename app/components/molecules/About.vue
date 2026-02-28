@@ -45,10 +45,10 @@
                   Quick Facts
                 </h3>
                 <dl class="space-y-3">
-                  <div v-for="[label, value] in facts" :key="label"
+                  <div v-for="fact in facts" :key="fact.label"
                     class="flex items-baseline justify-between border-b border-border/50 pb-3 last:border-0 last:pb-0">
-                    <dt class="text-sm text-muted-foreground">{{ label }}</dt>
-                    <dd class="text-sm font-medium text-foreground">{{ value }}</dd>
+                    <dt class="text-sm text-muted-foreground">{{ fact.label }}</dt>
+                    <dd class="text-sm font-medium text-foreground">{{ fact.value }}</dd>
                   </div>
                 </dl>
               </div>
@@ -61,13 +61,18 @@
 </template>
 
 <script setup lang="ts">
-import RevealItem from "~/components/atoms/RevealItem.vue"
-import RevealSection from "~/components/atoms/RevealSection.vue"
+import RevealItem from "~/components/atoms/RevealItem.vue";
+import RevealSection from "~/components/atoms/RevealSection.vue";
 
-const facts: [string, string][] = [
-  ["Location", "Remote / Worldwide"],
-  ["Experience", "5+ years"],
-  ["Focus", "Full-Stack Development"],
-  ["Languages", "EN / ES"],
-]
+interface Fact {
+  label: string;
+  value: string;
+};
+
+const facts: Fact[] = [
+  { label: "Location", value: "Remote / Worldwide" },
+  { label: "Experience", value: "2+ years" },
+  { label: "Focus", value: "Full-Stack Development" },
+  { label: "Languages", value: "EN / ES" },
+];
 </script>
