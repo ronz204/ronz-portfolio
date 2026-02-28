@@ -3,7 +3,6 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from "vue";
 import { useParticles } from "~/composables/useParticles";
 
 const canvasRef = ref<HTMLCanvasElement | null>(null);
