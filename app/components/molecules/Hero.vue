@@ -70,3 +70,13 @@ const socials: Social[] = [
   { label: "LinkedIn", href: "https://linkedin.com/in/roney-ruiz-rojas-a8a98b292", icon: "lucide:linkedin" },
 ] as const;
 </script>
+
+<style scoped>
+.hero-vignette {
+  background: radial-gradient(ellipse at 50% 50%, transparent 0%, oklch(0.07 0 0) 70%);
+}
+
+.hero-title-underline {
+  background: linear-gradient(90deg, oklch(0.45 0 0), transparent);
+}
+</style>
