@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import Particles from "~/components/atoms/Particles.vue";
+import Hero from "~/components/molecules/Hero.vue";
 import Navigation from "~/components/molecules/Navigation.vue";
 </script>
 
 <template>
-  <div class="relative flex min-h-screen bg-black">
+  <div>
     <Navigation />
-    <Particles />
-
-    <!-- <Icon name="lucide:github" style="color: white" /> -->
+    <main>
+      <Hero />
+    </main>
   </div>
 </template>
