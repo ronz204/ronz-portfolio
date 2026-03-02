@@ -1,90 +1,76 @@
+/* ─────────────────────────────────────────────────────────────────────────
+ * Design Tokens
+ *
+ * Three layers, each with a clear purpose:
+ *
+ *  1. :root        — Nuxt UI --ui-* overrides. Single source of truth for
+ *                    all color values; applied to both UI components and
+ *                    the Tailwind utility mappings below.
+ *
+ *  2. @theme       — Tailwind tokens with literal values only (fonts).
+ *                    Generates the corresponding utility classes.
+ *
+ *  3. @theme inline — Tailwind color utilities that reference --ui-* vars.
+ *                    Uses `inline` so utility classes output var() directly
+ *                    instead of creating an extra CSS variable indirection.
+ * ───────────────────────────────────────────────────────────────────────── */
+
+/* ─── 1. Nuxt UI overrides ──────────────────────────────────────────────── */
 :root {
-  /* Core palette */
-  --background: oklch(0.07 0 0);
-  --foreground: oklch(0.93 0 0);
+  /* Backgrounds */
+  --ui-bg:              oklch(0.07 0 0);
+  --ui-bg-muted:        oklch(0.15 0 0);
+  --ui-bg-elevated:     oklch(0.10 0 0);
+  --ui-bg-accented:     oklch(0.20 0 0);
+  --ui-bg-inverted:     oklch(0.93 0 0);
 
-  /* Surfaces */
-  --card: oklch(0.1 0 0);
-  --card-foreground: var(--foreground);
-  --popover: var(--card);
-  --popover-foreground: var(--foreground);
-
-  /* Interactive */
-  --primary: var(--foreground);
-  --primary-foreground: var(--background);
-  --secondary: oklch(0.15 0 0);
-  --secondary-foreground: oklch(0.85 0 0);
-  --muted: var(--secondary);
-  --muted-foreground: oklch(0.55 0 0);
-  --accent: oklch(0.20 0 0);
-  --accent-foreground: oklch(0.90 0 0);
-
-  /* Feedback */
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.98 0 0);
-
-  /* Form & focus */
-  --border: var(--accent);
-  --input: var(--accent);
-  --ring: oklch(0.40 0 0);
-
-  /* Radius */
-  --radius: 0.5rem;
-
-  /* ─── Nuxt UI semantic overrides ─────────────────────────────────────────
-     Map --ui-* variables to our palette so Nuxt UI components
-     stay in harmony with our design without any blue-tinted defaults.
-     ──────────────────────────────────────────────────────────────────────── */
-
-  /* Background */
-  --ui-bg:           var(--background);
-  --ui-bg-muted:     var(--secondary);
-  --ui-bg-elevated:  var(--card);
-  --ui-bg-accented:  var(--accent);
-  --ui-bg-inverted:  var(--foreground);
-
-  /* Border */
-  --ui-border:          var(--accent);
+  /* Borders */
+  --ui-border:          oklch(0.20 0 0);
   --ui-border-muted:    oklch(0.13 0 0);
   --ui-border-accented: oklch(0.27 0 0);
-  --ui-border-inverted: var(--foreground);
+  --ui-border-inverted: oklch(0.93 0 0);
 
   /* Text */
   --ui-text-dimmed:      oklch(0.40 0 0);
-  --ui-text-muted:       var(--muted-foreground);
+  --ui-text-muted:       oklch(0.55 0 0);
   --ui-text-toned:       oklch(0.65 0 0);
-  --ui-text:             var(--foreground);
-  --ui-text-highlighted: var(--foreground);
-  --ui-text-inverted:    var(--background);
+  --ui-text:             oklch(0.93 0 0);
+  --ui-text-highlighted: oklch(0.93 0 0);
+  --ui-text-inverted:    oklch(0.07 0 0);
 
   /* Radius */
-  --ui-radius: var(--radius);
+  --ui-radius: 0.5rem;
 }
 
-@theme inline {
+/* ─── 2. Tailwind theme variables (literal values) ───────────────────────── */
+@theme {
   --font-sans: 'Inter', 'Geist', sans-serif;
-  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-destructive-foreground: var(--destructive-foreground);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback', monospace;
+}
+
+/* ─── 3. Tailwind color utilities (mapped to --ui-* via @theme inline) ───── */
+@theme inline {
+  /* Surfaces */
+  --color-background:           var(--ui-bg);
+  --color-card:                 var(--ui-bg-elevated);
+  --color-secondary:            var(--ui-bg-muted);
+  --color-accent:               var(--ui-bg-accented);
+
+  /* Text */
+  --color-foreground:           var(--ui-text);
+  --color-muted-foreground:     var(--ui-text-muted);
+  --color-card-foreground:      var(--ui-text);
+  --color-secondary-foreground: oklch(0.85 0 0);
+  --color-accent-foreground:    var(--ui-text);
+  --color-primary:              var(--ui-text);
+  --color-primary-foreground:   var(--ui-bg);
+
+  /* Borders & focus */
+  --color-border:               var(--ui-border);
+  --color-input:                var(--ui-border);
+  --color-ring:                 var(--ui-border-accented);
+
+  /* Feedback */
+  --color-destructive:          oklch(0.577 0.245 27.325);
+  --color-destructive-foreground: oklch(0.98 0 0);
 }

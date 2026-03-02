@@ -1,10 +1,17 @@
-@keyframes fade-up {
-  from { opacity: 0; transform: translateY(30px); }
-  to   { opacity: 1; transform: translateY(0); }
+/*
+ * Animations
+ *
+ * Defined as Tailwind @theme tokens so they integrate with the design
+ * system and generate proper `animate-*` utility classes.
+ *
+ * The @keyframes rules are co-located inside the @theme block so they
+ * are only emitted when the animation is actually used in the project.
+ */
+@theme {
+  --animate-fade-up: fade-up 0.8s ease-out forwards;
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
 }
-
-.animate-fade-up {
-  animation: fade-up 0.8s ease-out forwards;
-}
-
-
