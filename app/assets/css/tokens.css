@@ -21,32 +21,44 @@
 
   /* Feedback */
   --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: var(--destructive);
+  --destructive-foreground: oklch(0.98 0 0);
 
   /* Form & focus */
   --border: var(--accent);
   --input: var(--accent);
   --ring: oklch(0.40 0 0);
 
-  /* Charts */
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-
   /* Radius */
   --radius: 0.5rem;
 
-  /* Sidebar — mirrors main tokens */
-  --sidebar: var(--card);
-  --sidebar-foreground: var(--foreground);
-  --sidebar-primary: var(--primary);
-  --sidebar-primary-foreground: var(--primary-foreground);
-  --sidebar-accent: var(--secondary);
-  --sidebar-accent-foreground: var(--secondary-foreground);
-  --sidebar-border: var(--border);
-  --sidebar-ring: var(--ring);
+  /* ─── Nuxt UI semantic overrides ─────────────────────────────────────────
+     Map --ui-* variables to our palette so Nuxt UI components
+     stay in harmony with our design without any blue-tinted defaults.
+     ──────────────────────────────────────────────────────────────────────── */
+
+  /* Background */
+  --ui-bg:           var(--background);
+  --ui-bg-muted:     var(--secondary);
+  --ui-bg-elevated:  var(--card);
+  --ui-bg-accented:  var(--accent);
+  --ui-bg-inverted:  var(--foreground);
+
+  /* Border */
+  --ui-border:          var(--accent);
+  --ui-border-muted:    oklch(0.13 0 0);
+  --ui-border-accented: oklch(0.27 0 0);
+  --ui-border-inverted: var(--foreground);
+
+  /* Text */
+  --ui-text-dimmed:      oklch(0.40 0 0);
+  --ui-text-muted:       var(--muted-foreground);
+  --ui-text-toned:       oklch(0.65 0 0);
+  --ui-text:             var(--foreground);
+  --ui-text-highlighted: var(--foreground);
+  --ui-text-inverted:    var(--background);
+
+  /* Radius */
+  --ui-radius: var(--radius);
 }
 
 @theme inline {
@@ -71,21 +83,8 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
 }
