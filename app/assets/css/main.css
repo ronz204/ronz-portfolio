@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
 
-@import "./tokens.css";
-@import "./anime.css";
-@import "./base.css";
+@import "./tokens.css"; /* Design tokens and theme variables */
+@import "./anime.css";  /* Keyframes and animation utilities */
+@import "./base.css";   /* Global resets and base element styles */
