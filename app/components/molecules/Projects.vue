@@ -32,5 +32,14 @@ const projects: Project[] = [
     githubUrl: "https://github.com/gesmia",
     featured: true,
   },
+  {
+    title: "Foodie",
+    description: "A brief description of what this project does and the problem it solves.",
+    image: "/imgs/foodie.png",
+    stack: ["Next", "TypeScript", "Tailwind", "AWS"],
+    liveUrl: "https://foodie-match.com/",
+    githubUrl: "https://github.com/gesmia",
+    featured: true,
+  },
 ];
 </script>
