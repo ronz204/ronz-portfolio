@@ -57,7 +57,7 @@
 </template>
 
 <script lang="ts" setup>
-import Particles from "../atoms/Particles.vue";
+import Particles from "~/components/atoms/Particles.vue";
 
 interface Social {
   label: string;
