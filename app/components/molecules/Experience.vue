@@ -2,7 +2,7 @@
   <section id="experience" class="relative py-24 md:py-32">
     <!-- Subtle top divider -->
     <div class="absolute left-6 right-6 top-0 mx-auto max-w-6xl">
-      <div class="h-px bg-zinc-900" />
+      <div class="h-px bg-border" />
     </div>
 
     <div class="mx-auto max-w-6xl px-6">
@@ -31,13 +31,8 @@
                     <a :href="exp.companyUrl"
                       class="group/link inline-flex items-center gap-1 text-lg text-muted-foreground transition-colors hover:text-foreground">
                       {{ exp.company }}
-                      <svg xmlns="http://www.w3.org/2000/svg"
-                        class="h-4 w-4 opacity-0 transition-all group-hover/link:opacity-100 group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M7 7h10v10" />
-                        <path d="M7 17 17 7" />
-                      </svg>
+                      <Icon name="lucide:arrow-up-right"
+                        class="h-4 w-4 opacity-0 transition-all group-hover/link:opacity-100 group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
                     </a>
                   </div>
 
@@ -62,8 +57,8 @@
 </template>
 
 <script setup lang="ts">
-import RevealSection from "~/components/atoms/RevealSection.vue";
 import RevealItem from "~/components/atoms/RevealItem.vue";
+import RevealSection from "~/components/atoms/RevealSection.vue";
 import SectionHeading from "~/components/atoms/SectionHeading.vue";
 
 interface Experience {
@@ -73,7 +68,7 @@ interface Experience {
   companyUrl: string;
   description: string;
   stack: string[];
-}
+};
 
 const experiences: Experience[] = [
   {
