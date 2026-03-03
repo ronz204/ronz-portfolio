@@ -1,11 +1,11 @@
 interface Particle {
-  x: number
-  y: number
-  vx: number
-  vy: number
-  radius: number
-  opacity: number
-}
+  x: number;
+  y: number;
+  vx: number;
+  vy: number;
+  radius: number;
+  opacity: number;
+};
 
 export function useParticles(canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D) {
   let animationId = 0;
@@ -25,7 +25,7 @@ export function useParticles(canvas: HTMLCanvasElement, ctx: CanvasRenderingCont
         vy: (Math.random() - 0.5) * 0.3,
         
         radius: Math.random() * 1.5 + 0.5,
-        opacity: Math.random() * 0.4 + 0.40,
+        opacity: Math.random() * 0.4 + 0.70,
       });
     };
   };
@@ -61,7 +61,7 @@ export function useParticles(canvas: HTMLCanvasElement, ctx: CanvasRenderingCont
     ctx.moveTo(p1.x, p1.y);
     ctx.lineTo(p2.x, p2.y);
 
-    ctx.strokeStyle = `rgba(255, 255, 255, ${0.50 * (1 - dist / 120)})`;
+    ctx.strokeStyle = `rgba(255, 255, 255, ${0.90 * (1 - dist / 120)})`;
     ctx.lineWidth = 0.5;
     ctx.stroke();
   };
