@@ -1,19 +1,19 @@
 <script setup lang="ts">
-import Hero from "~/components/molecules/Hero.vue";
-import About from "~/components/molecules/About.vue";
-import Projects from "~/components/molecules/Projects.vue";
-import Experience from "~/components/molecules/Experience.vue";
-import Navigation from "~/components/molecules/Navigation.vue";
+import Navigation from "~/components/organisms/Navigation.vue";
+import HeroSection from "~/components/organisms/HeroSection.vue";
+import AboutSection from "~/components/organisms/AboutSection.vue";
+import PiecesSection from "~/components/organisms/PiecesSection.vue";
+import CareerSection from "~/components/organisms/CareerSection.vue";
 </script>
 
 <template>
   <div>
     <Navigation />
     <main>
-      <Hero />
-      <About />
-      <Experience />
-      <Projects />
+      <HeroSection />
+      <AboutSection />
+      <CareerSection />
+      <PiecesSection />
     </main>
   </div>
 </template>
