@@ -25,7 +25,7 @@ export function useParticles(canvas: HTMLCanvasElement, ctx: CanvasRenderingCont
         vy: (Math.random() - 0.5) * 0.3,
         
         radius: Math.random() * 1.5 + 0.5,
-        opacity: Math.random() * 0.4 + 0.50,
+        opacity: Math.random() * 0.4 + 0.70,
       });
     };
   };
