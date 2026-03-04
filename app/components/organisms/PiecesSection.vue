@@ -17,6 +17,8 @@
 </template>
 
 <script lang="ts" setup>
+import gesmiaImg from "~/assets/imgs/gesmia.png";
+
 import ProjectCard from "~/components/molecules/ProjectCard.vue";
 import RevealSection from "~/components/molecules/RevealSection.vue";
 import SectionHeading from "~/components/molecules/SectionHeading.vue";
@@ -26,7 +28,7 @@ const projects: Project[] = [
   {
     title: "Gesmia",
     description: "Top-20 App in Magazines and Newspapers category on the App Store. Family app - share your location with friends & family.",
-    image: "/imgs/gesmia.png",
+    image: gesmiaImg,
     stack: ["React", "TypeScript", "Tailwind", ".NET"],
     liveUrl: "https://github.com/gesmia",
     githubUrl: "https://github.com/gesmia",
