@@ -76,6 +76,6 @@ const socials: Social[] = [
 }
 
 .title-underline {
-  background: linear-gradient(90deg, oklch(0.45 0 0), transparent);
+  background: linear-gradient(90deg, oklch(0.75 0 0), transparent);
 }
 </style>
