@@ -3,16 +3,16 @@
     <div class="mx-auto max-w-6xl px-6">
       <RevealSection>
         <!-- Section Heading -->
-        <SectionHeading label="01 / About" title="A bit about me" />
+        <SectionHeading label="01 / About" title="Hi, I'm Roney." />
 
         <!-- Content Grid -->
         <div class="grid gap-12 md:grid-cols-5">
           <div class="md:col-span-3">
             <RevealItem :delay="100">
               <p class="text-base leading-relaxed text-muted-foreground md:text-lg">
-                I"m a full-stack developer with a passion for building products that live at the
-                intersection of design and engineering. With over 5 years of experience, I"ve worked
-                across startups and agencies helping teams ship meaningful software.
+                I'm a full-stack engineer with a passion for building robust software systems that scale.
+                With over 2 years of experience, I've worked across startups and agencies, taking products
+                from initial architecture to global deployment.
               </p>
             </RevealItem>
             <RevealItem :delay="200">
@@ -59,7 +59,7 @@ interface Fact {
 const facts: Fact[] = [
   { label: "Location", value: "Remote / Worldwide" },
   { label: "Experience", value: "2+ years" },
-  { label: "Focus", value: "Full-Stack Development" },
+  { label: "Focus", value: "Full-Stack / Cloud" },
   { label: "Languages", value: "EN / ES" },
 ];
 </script>
