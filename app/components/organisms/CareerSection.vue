@@ -82,11 +82,11 @@ const experiences: Experience[] = [
   },
   {
     period: "2024 — 2025",
-    role: "Full-Stack Engineer",
+    role: "Mobile & Backend Engineer",
     company: "Gesmia",
     companyUrl: "https://github.com/gesmia",
     description:
-      "Leading the frontend architecture for a SaaS platform serving 50k+ users. Building design systems, optimizing performance, and mentoring junior developers.",
+      "Optimized enterprise mobile and backend systems, achieving a 40% increase in scalability through architectural refactoring. Streamlined release cycles by 60% via cloud automation and resolved high-priority bottlenecks to enhance user experience.",
     stack: ["React", "TypeScript", "Tailwind", ".NET", "Zustand", "WebSockets"],
   },
   {
@@ -95,7 +95,7 @@ const experiences: Experience[] = [
     company: "Golabs",
     companyUrl: "https://golabstech.com/",
     description:
-      "Developed web applications for clients across e-commerce, fintech, and healthcare. Led the migration of legacy systems to modern stacks.",
+      "Developed web applications for e-commerce and fintech clients using modern architectural patterns. Engineered complex API integrations and automated testing workflows that significantly improved system reliability and team productivity.",
     stack: ["Laravel", "Vue", "GraphQL", "REST", "PostgreSQL", "Docker", "AWS"],
   },
 ];
